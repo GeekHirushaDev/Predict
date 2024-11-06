@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Wand2 } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { Wand2 } from "lucide-react";
 
 interface WelcomeScreenProps {
   onStart: () => void;
@@ -20,15 +20,16 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
       >
         <Wand2 size={48} className="text-purple-600" />
       </motion.div>
-      
+
       <h1 className="text-4xl font-bold text-gray-800 mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
         Magic Number Guessing Game
       </h1>
-      
+
       <p className="text-lg text-gray-600 mb-8 max-w-md mx-auto">
-        Think of a number between 1-99, and I'll guess it through the power of magic! 🎩✨
+        Think of a number between 1-99, and I'll guess it through the power of
+        magic! 🎩✨
       </p>
-      
+
       <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
@@ -37,6 +38,9 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
       >
         Start Game
       </motion.button>
+      <motion.p className="text-center mt-8 text-gray-600">
+        Idea from Siluna Wimalasinghe
+      </motion.p>
     </motion.div>
   );
 };
